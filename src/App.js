@@ -3,14 +3,14 @@ import './App.css';
 import React from 'react'
 import Navbar from './components/Navbar';
 import News from './components/News';
-import { BrowserRouter,Routes ,Route} from "react-router-dom";
+import { HashRouter,Routes ,Route} from "react-router-dom";
 
 
 
 const App=()=>{
   const pageSize=20;
     return (
-      <BrowserRouter>
+      <HashRouter>
       <div>
         <Navbar/>
         <Routes>
@@ -24,7 +24,7 @@ const App=()=>{
         <Route exact path="/general" element={<News key="general" pageSize={pageSize} category="general"/>}/>
         </Routes>
       </div>
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 
